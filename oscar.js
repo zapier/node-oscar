@@ -3174,12 +3174,12 @@ Buffer.prototype.toString = function() {
     return _oldBufferToString.apply(this, Array.prototype.slice.call(arguments));
 };
 
-var _oldStreamConnect = net.Stream.prototype.connect;
-net.Stream.prototype.connect = function(port, host) {
-  this.remoteAddress = host;
-  this.remotePort = port;
-  _oldStreamConnect.apply(this, Array.prototype.slice.call(arguments));
-};
+// var _oldStreamConnect = net.Stream.prototype.connect;
+// net.Stream.prototype.connect = function(port, host) {
+//   this.remoteAddress = host;
+//   this.remotePort = port;
+//   _oldStreamConnect.apply(this, Array.prototype.slice.call(arguments));
+// };
 
 function getConnSvcNames(conn) {
   if (conn.id === 'login')
